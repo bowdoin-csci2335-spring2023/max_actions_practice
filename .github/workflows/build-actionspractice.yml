@@ -41,7 +41,7 @@ jobs:
         run: cd GhActionsDemo && mvn --batch-mode --update-snapshots package
 
       - name: Publish Test Report
-      if: ${{always()}}
+      if: ${{ always() }}
       uses: ScaCap/action-surefire-report@v.1.2.0
       with:
         check_name: JUnit Test Results
